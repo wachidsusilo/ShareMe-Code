@@ -1,0 +1,25 @@
+@import '../../assets/colors/color';
+
+.menu {
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $backgroundDark;
+    border-radius: 4px;
+    box-shadow: 0 0 0 0 $backgroundLight;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+
+    &-item {
+        padding: 4px 8px;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: $primaryText;
+
+        &:hover {
+            background-color: $backgroundLight;
+        }
+    }
+}

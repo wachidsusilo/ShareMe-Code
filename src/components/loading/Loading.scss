@@ -1,0 +1,145 @@
+@import "../../assets/colors/color";
+
+.loading {
+    height: 32px;
+    width: 32px;
+
+    &-icon {
+        height: 100%;
+        width: 100%;
+        animation: loader-1 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: auto;
+            margin: auto;
+            width: 25%;
+            height: 25%;
+            background: $primaryColor;
+            border-radius: 50%;
+            animation: loader-2 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: auto;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 25%;
+            height: 25%;
+            background: $primaryColor;
+            border-radius: 50%;
+            animation: loader-3 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        }
+
+        & span {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+        }
+
+        & span::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: auto;
+            right: 0;
+            margin: auto;
+            width: 25%;
+            height: 25%;
+            background: $primaryColor;
+            border-radius: 50%;
+            animation: loader-4 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        }
+
+        & span::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 25%;
+            height: 25%;
+            background: $primaryColor;
+            border-radius: 50%;
+            animation: loader-5 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        }
+    }
+}
+
+@keyframes loader-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(2turn);
+    }
+}
+
+@keyframes loader-2 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(330%, 0, 0) scale(0.5);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-3 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(-330%, 0, 0) scale(0.5);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-4 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(0, 330%, 0) scale(0.5);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-5 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        transform: translate3d(0, -330%, 0) scale(0.5);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}

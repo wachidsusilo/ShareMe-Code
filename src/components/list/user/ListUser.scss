@@ -1,0 +1,19 @@
+@import '../../../assets/colors/color';
+
+.list-user {
+    width: 100%;
+    
+    &-item {
+        height: 25px;
+        padding: 0 8px;
+        display: flex;
+        align-items: center;
+        color: #95d5ff;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $backgroundLight;
+        }
+    }
+}

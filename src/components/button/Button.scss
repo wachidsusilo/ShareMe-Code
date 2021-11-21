@@ -1,0 +1,31 @@
+@import "../../assets/colors/color";
+
+.button {
+    height: 30px;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 0 8px;
+    background-color: $primaryColor;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(110%);
+    }
+
+    &-icon {
+        width: 20px;
+        height: 20px;
+        fill: $primaryText;
+    }
+
+    &-label {
+        color: $primaryText;
+        display: flex;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0 8px;
+    }
+}

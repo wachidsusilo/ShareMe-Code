@@ -1,0 +1,75 @@
+@import '../../assets/colors/color';
+
+.search {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 8px 0 $backgroundDark;
+
+    &-container {
+        width: calc(100% - 40px);
+        height: 45%;
+        display: flex;
+        box-shadow: 0 0 0 2px $backgroundLight;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+
+        &:focus-within {
+            box-shadow: 0 0 0 2px rgba($secondaryColor, 0.8);
+        }
+
+        &-input {
+            height: 100%;
+            flex-grow: 1;
+            background: none;
+            border: none;
+            color: $primaryText;
+            padding-left: 8px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-close {
+            width: 33px;
+            height: 100%;
+            $p: #{&};
+
+            &:hover {
+                #{$p}-icon {
+                    filter: brightness(120%);
+                }
+            }
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+                fill: #818181;
+                transition: filter 0.3s ease;
+            }
+        }
+
+        &-button {
+            width: 33px;
+            height: 100%;
+            $p: #{&};
+
+            &:hover {
+                #{$p}-icon {
+                    filter: brightness(120%);
+                }
+            }
+
+            &-icon {
+                width: 20px;
+                height: 20px;
+                fill: #818181;
+                transition: filter 0.3s ease;
+            }
+        }
+    }
+}

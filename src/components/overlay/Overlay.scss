@@ -1,0 +1,19 @@
+@import "../../assets/colors/color";
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    @media only screen and (max-width: 800px) {
+        width: 0;
+        height: 100vh;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &-show {
+            background-color: rgba(black, 0.8);
+        }
+    }
+}

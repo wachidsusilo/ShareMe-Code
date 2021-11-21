@@ -1,0 +1,74 @@
+
+.no-data-anim {
+    width: 200px;
+    height: 200px;
+    top: 40px;
+    left: 50px;
+    position: absolute;
+
+    @keyframes floating-1 {
+        0% {
+            top: 10%;
+        }
+        100% {
+            top: 16%;
+        }
+    }
+
+    @keyframes floating-5 {
+        0% {
+            top: 61%;
+        }
+        100% {
+            top: 65%;
+        }
+    }
+
+    @keyframes wandering-4 {
+        0% {
+            left: 61%;
+            transform: rotateY(20deg), rotateX(20deg);
+        }
+        100% {
+            left: 64%;
+            transform: rotateY(-20deg), rotateX(-20deg);
+        }
+    }
+
+    &-1 {
+        width: 30%;
+        top: 15%;
+        left: 5%;
+        position: absolute;
+        animation: floating-1 3s alternate ease-in-out infinite;
+    }
+
+    &-2 {
+        width: 58%;
+        position: absolute;
+        top: 20%;
+        left: 25%;
+    }
+
+    &-3 {
+        width: 100%;
+        position: absolute;
+        top: 35%;
+    }
+
+    &-4 {
+        width: 24%;
+        position: absolute;
+        top: 40%;
+        left: 62%;
+        animation: wandering-4 2s alternate ease-in-out infinite;
+    }
+
+    &-5 {
+        width: 30%;
+        position: absolute;
+        top: 63%;
+        left: 8%;
+        animation: floating-5 6s alternate ease-in-out infinite;
+    }
+}

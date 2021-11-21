@@ -1,0 +1,105 @@
+@import "../../assets/colors/color";
+
+.login {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    overflow: hidden;
+
+    &-card {
+        width: 280px;
+        height: 300px;
+        background-color: $background;
+        border-radius: 16px;
+        box-shadow: 0 0 0 2px $backgroundLight, 0 0 5px 4px $backgroundDark;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-header {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+
+            &-app-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            &-app-name {
+                height: 35px;
+                margin-top: 24px;
+            }
+        }
+
+        &-button {
+            width: 220px;
+            height: 40px;
+            margin-top: 36px;
+            display: flex;
+            align-items: center;
+            background-color: $background;
+            border-radius: 40px;
+            padding: 0 8px;
+            box-shadow: 0 0 0 2px #1e88e5;
+            cursor: pointer;
+            color: $primaryText;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: $backgroundLight;
+            }
+
+            &-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            &-label {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 15px;
+            }
+        }
+
+        &-loading {
+            height: 40px;
+            margin-top: 36px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+
+            &-icon {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    &-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($backgroundDark, 0.7);
+        z-index: -1;
+    }
+}

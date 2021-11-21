@@ -1,0 +1,79 @@
+@import "../../../assets/colors/color";
+
+.list-note {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &-item {
+        width: 300px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 0 0 $backgroundLight;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $backgroundLight;
+        }
+
+        &-picture {
+            margin-left: 12px;
+        }
+
+        &-description {
+            flex-grow: 1;
+            height: 100%;
+            padding: 0 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-title {
+                max-width: 180px;
+                margin-bottom: 4px;
+                display: flex;
+                align-items: center;
+
+                &-label {
+                    color: #db3295;
+                    font-weight: 400;
+                    font-size: 14px;
+                    filter: brightness(130%);
+                }
+
+                &-lock {
+                    width: 15px;
+                    height: 15px;
+                    margin-left: 4px;
+                    margin-bottom: 2px;
+                    fill: rgba($primaryText, 0.5);
+                }
+            }
+
+            &-timestamp {
+                color: #ecc456;
+                font-size: 11px;
+            }
+        }
+
+        &-type {
+            width: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+            margin-right: 12px;
+
+            &-language {
+                width: 18px;
+                height: 18px;
+                margin-top: auto;
+            }
+        }
+    }
+}
